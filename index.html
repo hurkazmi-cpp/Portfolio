@@ -116,10 +116,32 @@
                         <a class="btn-aura btn-aura-primary px-6 py-2.5 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors shadow-sm"
                                 href="#contact">Let's Talk</a>
                 </nav>
-                <button class="md:hidden text-on-surface-variant">
+                <button id="mobileMenuBtn" class="md:hidden text-on-surface-variant p-2">
                         <span class="material-symbols-outlined">menu</span>
                 </button>
         </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay"
+                class="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden">
+                <div class="flex flex-col h-full p-8">
+                        <div class="flex items-center justify-between mb-12">
+                                <span class="font-headline font-bold text-xl text-primary">Menu</span>
+                                <button id="closeMobileMenuBtn" class="text-on-surface-variant p-2">
+                                        <span class="material-symbols-outlined">close</span>
+                                </button>
+                        </div>
+                        <nav class="flex flex-col gap-6 font-label text-lg">
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="#about">Home</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="about.html">About</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="#projects">Projects</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="#education">Education</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="#skills">Skills</a>
+                                <a class="btn-aura btn-aura-primary mt-4 px-8 py-4 bg-primary text-on-primary rounded-full text-center font-bold"
+                                        href="#contact">Let's Talk</a>
+                        </nav>
+                </div>
+        </div>
         <!-- Main Content -->
         <main class="pt-20">
                 <section class="min-h-screen flex items-center px-8 md:px-16 lg:px-32 relative fade-up-section pt-24 md:pt-32 overflow-hidden bg-grid-subtle"
@@ -319,13 +341,13 @@
                                                         class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
                                                         <div class="flex items-center justify-between mb-1">
                                                                 <h3
-                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        class="font-headline font-bold text-base md:text-lg text-on-surface">
                                                                         Vibe Coder/Web developer</h3>
                                                                 <span class="font-label text-sm text-primary">2026 -
                                                                         Present</span>
                                                         </div>
 
-                                                        <p class="font-body text-on-surface-variant text-sm">Crafting
+                                                        <p class="font-body text-on-surface-variant text-[13px] md:text-sm">Crafting
                                                                 seamless design systems and frontend architecture
                                                                 through a blend of vibe coding and technical logic.</p>
                                                 </div>
@@ -340,7 +362,7 @@
                                                         class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
                                                         <div class="flex items-center justify-between mb-1">
                                                                 <h3
-                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        class="font-headline font-bold text-base md:text-lg text-on-surface">
                                                                         BS Computer Science</h3>
                                                                 <span
                                                                         class="font-label text-sm text-on-surface-variant">2025
@@ -350,7 +372,7 @@
                                                                 class="font-headline font-medium text-sm text-primary mb-3">
                                                                 University of Management and Technology
                                                         </div>
-                                                        <p class="font-body text-on-surface-variant text-sm mb-4">
+                                                        <p class="font-body text-on-surface-variant text-[13px] md:text-sm mb-4">
                                                                 Currently
                                                                 pursuing BS in Computer Science and honing my skills in
                                                                 Web development and other CS related fields.</p>
@@ -374,7 +396,7 @@
                                                         class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
                                                         <div class="flex items-center justify-between mb-1">
                                                                 <h3
-                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        class="font-headline font-bold text-base md:text-lg text-on-surface">
                                                                         Intermediate</h3>
                                                                 <span
                                                                         class="font-label text-sm text-on-surface-variant">2023
@@ -383,7 +405,7 @@
                                                         <div
                                                                 class="font-headline font-medium text-sm text-primary mb-3">
                                                                 Roots International</div>
-                                                        <p class="font-body text-on-surface-variant text-sm mb-4">
+                                                        <p class="font-body text-on-surface-variant text-[13px] md:text-sm mb-4">
                                                                 Studied
                                                                 ICS, understood the core of programming and problem
                                                                 solving.</p>
@@ -407,7 +429,7 @@
                                                         class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
                                                         <div class="flex items-center justify-between mb-1">
                                                                 <h3
-                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        class="font-headline font-bold text-base md:text-lg text-on-surface">
                                                                         Matriculation</h3>
                                                                 <span
                                                                         class="font-label text-sm text-on-surface-variant">2021
@@ -416,7 +438,7 @@
                                                         <div
                                                                 class="font-headline font-medium text-sm text-primary mb-3">
                                                                 The Educators</div>
-                                                        <p class="font-body text-on-surface-variant text-sm mb-4">
+                                                        <p class="font-body text-on-surface-variant text-[13px] md:text-sm mb-4">
                                                                 Studied fundamental concepts of Computer Science.</p>
                                                         <div
                                                                 class="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-lg w-fit border border-primary/20">

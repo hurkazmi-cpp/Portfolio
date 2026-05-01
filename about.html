@@ -114,10 +114,32 @@
                         <a class="btn-aura btn-aura-primary px-6 py-2.5 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors shadow-sm"
                                 href="index.html#contact">Let's Talk</a>
                 </nav>
-                <button class="md:hidden text-on-surface-variant">
+                <button id="mobileMenuBtn" class="md:hidden text-on-surface-variant p-2">
                         <span class="material-symbols-outlined">menu</span>
                 </button>
         </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay"
+                class="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden">
+                <div class="flex flex-col h-full p-8">
+                        <div class="flex items-center justify-between mb-12">
+                                <span class="font-headline font-bold text-xl text-primary">Menu</span>
+                                <button id="closeMobileMenuBtn" class="text-on-surface-variant p-2">
+                                        <span class="material-symbols-outlined">close</span>
+                                </button>
+                        </div>
+                        <nav class="flex flex-col gap-6 font-label text-lg">
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="index.html">Home</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="about.html">About</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="index.html#projects">Projects</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="index.html#education">Education</a>
+                                <a class="mobile-nav-link border-b border-outline-variant/30 pb-4" href="index.html#skills">Skills</a>
+                                <a class="btn-aura btn-aura-primary mt-4 px-8 py-4 bg-primary text-on-primary rounded-full text-center font-bold"
+                                        href="index.html#contact">Let's Talk</a>
+                        </nav>
+                </div>
+        </div>
 
         <!-- Main Content -->
         <main class="pt-20">

@@ -100,4 +100,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start typing after reveal animation (sync with stagger-4 delay)
     setTimeout(typeLine, 2200);
+
+    // Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMobileMenuBtn = document.getElementById('closeMobileMenuBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && closeMobileMenuBtn && mobileMenuOverlay) {
+        const toggleMenu = (show) => {
+            if (show) {
+                mobileMenuOverlay.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            } else {
+                mobileMenuOverlay.classList.add('translate-x-full');
+                document.body.style.overflow = ''; // Restore scroll
+            }
+        };
+
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+        closeMobileMenuBtn.addEventListener('click', () => toggleMenu(false));
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+    }
 });
