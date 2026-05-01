@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Developer Portfolio</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fira+Code:wght@400;500;700&display=swap"
+                rel="stylesheet" />
+
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "surface-tint": "#6366f1",
+                                                "surface-container-low": "#e5e7ed",
+                                                "on-surface": "#2e3040",
+                                                "error": "#dc2626",
+                                                "error-container": "#fee2e2",
+                                                "surface-container-high": "#dcdee4",
+                                                "on-secondary-container": "#585a68",
+                                                "tertiary": "#7c3aed",
+                                                "on-primary-fixed": "#1e1b4b",
+                                                "tertiary-fixed-dim": "#c4b5fd",
+                                                "tertiary-container": "#a78bfa",
+                                                "secondary-container": "#d8dae6",
+                                                "on-error-container": "#991b1b",
+                                                "on-tertiary-fixed": "#2e1065",
+                                                "surface-container-highest": "#d6d8de",
+                                                "surface-bright": "#edeef4",
+                                                "inverse-surface": "#2e3040",
+                                                "inverse-on-surface": "#e8eaf0",
+                                                "surface": "#e8eaf0",
+                                                "surface-variant": "#dcdee4",
+                                                "on-secondary-fixed-variant": "#404252",
+                                                "outline-variant": "#d0d2dc",
+                                                "on-primary-container": "#e0e2ff",
+                                                "primary-fixed-dim": "#a5b4fc",
+                                                "inverse-primary": "#a5b4fc",
+                                                "surface-container": "#e2e4ea",
+                                                "tertiary-fixed": "#ede9fe",
+                                                "background": "#e8eaf0",
+                                                "on-surface-variant": "#585a68",
+                                                "on-secondary-fixed": "#1a1b26",
+                                                "on-primary-fixed-variant": "#4338ca",
+                                                "surface-dim": "#d4d6dc",
+                                                "primary": "#6366f1",
+                                                "secondary-fixed-dim": "#b8baca",
+                                                "on-tertiary-container": "#3b1f63",
+                                                "secondary-fixed": "#d8dae6",
+                                                "on-error": "#ffffff",
+                                                "surface-container-lowest": "#f0f2f8",
+                                                "on-primary": "#ffffff",
+                                                "on-secondary": "#ffffff",
+                                                "on-background": "#2e3040",
+                                                "on-tertiary-fixed-variant": "#5b21b6",
+                                                "primary-container": "#818cf8",
+                                                "secondary": "#6c6e7e",
+                                                "primary-fixed": "#e0e2ff",
+                                                "outline": "#8a8c9a",
+                                                "on-tertiary": "#ffffff"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.5rem",
+                                                "lg": "1rem",
+                                                "xl": "1.5rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "section": "120px"
+                                        },
+                                        "fontFamily": {
+                                                "headline": ["Outfit", "sans-serif"],
+                                                "display": ["Outfit", "sans-serif"],
+                                                "body": ["Outfit", "sans-serif"],
+                                                "label": ["Fira Code", "monospace"]
+                                        },
+                                        "fontSize": {
+                                                "display": ["4rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                                                "h2": ["2.5rem", { "lineHeight": "1.2", "fontWeight": "600" }],
+                                                "h3": ["1.5rem", { "lineHeight": "1.3", "fontWeight": "600" }],
+                                                "body": ["1.125rem", { "lineHeight": "1.6", "fontWeight": "400" }]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden relative min-h-screen">
+        <!-- Top Navigation -->
+        <header
+                class="fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-8 md:px-16 z-50 bg-background/80 backdrop-blur-md border-b border-surface-variant transition-all duration-300">
+                <a href="index.html" class="flex items-center gap-4 group">
+                        <div
+                                class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-display font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                HK
+                        </div>
+                        <span
+                                class="font-headline font-bold text-xl text-primary hover:text-primary/80 transition-colors">Hur
+                                Abbas Kazmi</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8 font-label text-sm font-medium text-on-surface-variant">
+                        <a class="hover:text-primary transition-colors" href="#about">Home</a>
+                        <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                        <a class="hover:text-primary transition-colors" href="#projects">Projects</a>
+                        <a class="hover:text-primary transition-colors" href="#education">Education</a>
+                        <a class="hover:text-primary transition-colors" href="#skills">Skills</a>
+                        <a class="btn-aura btn-aura-primary px-6 py-2.5 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors shadow-sm"
+                                href="#contact">Let's Talk</a>
+                </nav>
+                <button class="md:hidden text-on-surface-variant">
+                        <span class="material-symbols-outlined">menu</span>
+                </button>
+        </header>
+        <!-- Main Content -->
+        <main class="pt-20">
+                <section class="min-h-screen flex items-center px-8 md:px-16 lg:px-32 relative fade-up-section pt-24 md:pt-32 overflow-hidden bg-grid-subtle"
+                        id="about">
+                        <!-- Decorative Background Elements -->
+                        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+                                <!-- Glowing Orbs (Optimized Blur) -->
+                                <div
+                                        class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[80px] animate-pulse">
+                                </div>
+                                <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] animate-pulse"
+                                        style="animation-delay: 2s;"></div>
+
+                                <!-- Mouse Spotlight Glow -->
+                                <div id="hero-spotlight"
+                                        class="absolute w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none opacity-0 transition-opacity duration-700 z-0">
+                                </div>
+
+                                <!-- Premium Noise Texture -->
+                                <div
+                                        class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]">
+                                </div>
+
+                                <!-- Drifting Background Blobs (Optimized) -->
+                                <div
+                                        class="absolute top-[20%] right-[30%] w-64 h-64 bg-primary/5 rounded-full blur-[80px] animate-drift">
+                                </div>
+                                <div class="absolute bottom-[10%] left-[20%] w-96 h-96 bg-purple-500/5 rounded-full blur-[100px] animate-drift"
+                                        style="animation-delay: -5s;"></div>
+
+                                <!-- Floating Geometric Shapes (Prominent & Optimized) -->
+                                <div
+                                        class="absolute top-[10%] left-[5%] w-32 h-32 border-4 border-primary/20 rounded-full animate-float opacity-50">
+                                </div>
+                                <div
+                                        class="absolute bottom-[20%] right-[10%] w-48 h-48 border-4 border-primary/10 rotate-45 animate-float-delayed opacity-40">
+                                </div>
+                                <div
+                                        class="absolute top-[50%] right-[2%] w-24 h-24 bg-primary/15 rounded-2xl animate-float opacity-60">
+                                </div>
+
+                                <!-- Particle Dots (Enhanced) -->
+                                <div
+                                        class="absolute top-[15%] left-[30%] w-3 h-3 bg-primary/50 rounded-full animate-ping">
+                                </div>
+                                <div
+                                        class="absolute bottom-[40%] right-[35%] w-2 h-2 bg-primary/40 rounded-full animate-pulse">
+                                </div>
+                                <div class="absolute top-[70%] left-[12%] w-1.5 h-1.5 bg-primary/30 rounded-full animate-ping"
+                                        style="animation-delay: 1.5s;"></div>
+                                <div class="absolute bottom-[15%] right-[5%] w-2 h-2 bg-primary/20 rounded-full"></div>
+
+                                <!-- Floating Technical Icons (Prominent) -->
+                                <div class="absolute top-[12%] right-[15%] opacity-60 animate-float"
+                                        style="animation-duration: 6s;">
+                                        <span class="material-symbols-outlined text-8xl text-primary/70">code</span>
+                                </div>
+                                <div class="absolute bottom-[20%] left-[10%] opacity-50 animate-float-delayed"
+                                        style="animation-duration: 8s;">
+                                        <span
+                                                class="material-symbols-outlined text-[10rem] text-primary/60">terminal</span>
+                                </div>
+                                <div class="absolute top-[30%] left-[25%] opacity-55 animate-float"
+                                        style="animation-duration: 4s;">
+                                        <span class="material-symbols-outlined text-6xl text-primary/80">bolt</span>
+                                </div>
+                                <div class="absolute bottom-[12%] right-[25%] opacity-45 animate-float-delayed"
+                                        style="animation-duration: 10s;">
+                                        <span
+                                                class="material-symbols-outlined text-7xl text-primary/50">data_object</span>
+                                </div>
+                        </div>
+
+                        <div
+                                class="max-w-7xl mx-auto space-y-8 z-10 w-full flex flex-col md:flex-row items-center gap-16 relative">
+                                <div class="flex-1 space-y-8">
+                                        <div
+                                                class="inline-flex items-center gap-3 px-4 py-2 bg-surface/50 backdrop-blur-md border border-outline-variant rounded-full shadow-sm animate-float stagger-1">
+                                                <div class="w-2 h-2 bg-primary rounded-full animate-ping"></div>
+                                                <span
+                                                        class="font-label text-sm font-bold tracking-widest uppercase text-gradient">Hur
+                                                        Abbas Kazmi</span>
+                                        </div>
+                                        <h1
+                                                class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-on-surface leading-tight mb-2 stagger-2">
+                                                Crafting digital <span class="text-primary">vibes</span> through clean
+                                                code.
+                                        </h1>
+                                        <p
+                                                class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed stagger-3">
+                                                Vibe Coder & Full-Stack Developer. Building refined, high-performance
+                                                web applications that feel natural and seamless.
+                                        </p>
+                                        <div class="flex items-center gap-2 text-on-surface-variant stagger-3.5 opacity-80">
+                                                <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                                                <span class="font-label text-xs uppercase tracking-widest">Lahore, Punjab, Pakistan</span>
+                                        </div>
+                                        <div class="pt-8 flex flex-wrap items-center gap-4 stagger-4">
+                                                <a class="btn-aura btn-aura-surface inline-flex items-center gap-2 px-8 py-4 bg-surface text-primary font-label rounded-full hover:bg-surface-variant hover:shadow-md transition-all duration-300 border border-outline-variant"
+                                                        href="#projects">
+                                                        View Work
+                                                        <span
+                                                                class="material-symbols-outlined text-sm">arrow_downward</span>
+                                                </a>
+                                                <a class="btn-aura btn-aura-primary px-8 py-4 bg-primary text-on-primary font-label rounded-full hover:bg-primary/90 transition-colors shadow-sm"
+                                                        href="#contact">
+                                                        Let's Talk
+                                                </a>
+                                        </div>
+                                </div>
+                                <!-- Profile Area -->
+                                <div class="relative group shrink-0">
+                                        <div
+                                                class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-[2.5rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                        </div>
+                                        <div
+                                                class="w-full md:w-[400px] lg:w-[450px] h-[500px] lg:h-[600px] bg-surface-container rounded-3xl border-4 border-background shadow-2xl flex items-center justify-center overflow-hidden relative z-10">
+                                                <img src="profile.jpg" alt="Hur Abbas Kazmi"
+                                                        class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
+
+                                                <!-- Floating Glassmorphic Badge -->
+                                                <div
+                                                        class="absolute bottom-12 -left-20 bg-surface/80 backdrop-blur-xl border border-outline-variant p-4 rounded-2xl shadow-2xl z-20 animate-float min-w-[200px] hover:scale-105 transition-transform">
+                                                        <div class="flex items-center gap-4">
+                                                                <div
+                                                                        class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-primary text-3xl">verified</span>
+                                                                </div>
+                                                                <div>
+                                                                        <p
+                                                                                class="text-[11px] font-black text-primary uppercase tracking-[0.2em] mb-0.5">
+                                                                                Vibe Certified</p>
+                                                                        <p class="text-sm font-bold text-on-surface">
+                                                                                Full-Stack Dev</p>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <!-- The Vibe Terminal (Gimmick) -->
+                                        <div
+                                                class="absolute -top-12 -right-16 w-64 terminal-window rounded-xl p-4 z-30 animate-float-delayed hidden lg:block">
+                                                <div class="flex gap-1.5 mb-3">
+                                                        <div class="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
+                                                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
+                                                        <div class="w-2.5 h-2.5 rounded-full bg-green-500/40"></div>
+                                                </div>
+                                                <div class="font-mono text-[10px] space-y-2 text-on-surface-variant">
+                                                        <div class="flex gap-2">
+                                                                <span class="text-primary">></span>
+                                                                <span id="terminal-line-1"></span>
+                                                        </div>
+                                                        <div class="flex gap-2">
+                                                                <span class="text-primary">></span>
+                                                                <span id="terminal-line-2"></span>
+                                                        </div>
+                                                        <div class="flex gap-2">
+                                                                <span class="text-primary">></span>
+                                                                <span id="terminal-line-3" class="typing-cursor"></span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-- Premium Scroll Indicator -->
+                        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-20">
+                                <span
+                                        class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold">Scroll</span>
+                                <div
+                                        class="w-[2px] h-12 bg-gradient-to-b from-primary/60 to-transparent relative overflow-hidden rounded-full">
+                                        <div
+                                                class="absolute top-0 left-0 w-full h-1/2 bg-primary rounded-full animate-scroll-dot">
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Education Section -->
+                <section class="py-section px-8 md:px-16 lg:px-32 bg-surface-container-lowest fade-up-section"
+                        id="education">
+                        <div class="max-w-4xl mx-auto">
+                                <h2 class="font-headline text-h2 text-on-surface mb-16 text-center">Education &amp;
+                                        Experience</h2>
+                                <div
+                                        class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-outline-variant before:to-transparent">
+                                        <!-- Timeline Item 1 -->
+                                        <div
+                                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                                <div
+                                                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                                </div>
+                                                <div
+                                                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
+                                                        <div class="flex items-center justify-between mb-1">
+                                                                <h3
+                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        Vibe Coder/Web developer</h3>
+                                                                <span class="font-label text-sm text-primary">2026 -
+                                                                        Present</span>
+                                                        </div>
+
+                                                        <p class="font-body text-on-surface-variant text-sm">Crafting
+                                                                seamless design systems and frontend architecture
+                                                                through a blend of vibe coding and technical logic.</p>
+                                                </div>
+                                        </div>
+                                        <!-- Timeline Item 2 -->
+                                        <div
+                                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                                <div
+                                                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-surface-variant shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                                </div>
+                                                <div
+                                                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
+                                                        <div class="flex items-center justify-between mb-1">
+                                                                <h3
+                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        BS Computer Science</h3>
+                                                                <span
+                                                                        class="font-label text-sm text-on-surface-variant">2025
+                                                                        - Present</span>
+                                                        </div>
+                                                        <div
+                                                                class="font-headline font-medium text-sm text-primary mb-3">
+                                                                University of Management and Technology
+                                                        </div>
+                                                        <p class="font-body text-on-surface-variant text-sm mb-4">
+                                                                Currently
+                                                                pursuing BS in Computer Science and honing my skills in
+                                                                Web development and other CS related fields.</p>
+                                                        <div
+                                                                class="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-lg w-fit border border-primary/20">
+                                                                <span
+                                                                        class="material-symbols-outlined text-sm text-primary">analytics</span>
+                                                                <span
+                                                                        class="font-label text-xs font-bold text-primary tracking-wider uppercase">Current
+                                                                        CGPA: 3.83</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <!-- Timeline Item 3 -->
+                                        <div
+                                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                                <div
+                                                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-surface-variant shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                                </div>
+                                                <div
+                                                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
+                                                        <div class="flex items-center justify-between mb-1">
+                                                                <h3
+                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        Intermediate</h3>
+                                                                <span
+                                                                        class="font-label text-sm text-on-surface-variant">2023
+                                                                        - 2025</span>
+                                                        </div>
+                                                        <div
+                                                                class="font-headline font-medium text-sm text-primary mb-3">
+                                                                Roots International</div>
+                                                        <p class="font-body text-on-surface-variant text-sm mb-4">
+                                                                Studied
+                                                                ICS, understood the core of programming and problem
+                                                                solving.</p>
+                                                        <div
+                                                                class="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-lg w-fit border border-primary/20">
+                                                                <span
+                                                                        class="material-symbols-outlined text-sm text-primary">school</span>
+                                                                <span
+                                                                        class="font-label text-xs font-bold text-primary tracking-wider uppercase">Grade:
+                                                                        A+</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <!-- Timeline Item 4 -->
+                                        <div
+                                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                                <div
+                                                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-surface-variant shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                                </div>
+                                                <div
+                                                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-surface border border-outline-variant shadow-sm hover:shadow-md transition-shadow card-hover">
+                                                        <div class="flex items-center justify-between mb-1">
+                                                                <h3
+                                                                        class="font-headline font-bold text-lg text-on-surface">
+                                                                        Matriculation</h3>
+                                                                <span
+                                                                        class="font-label text-sm text-on-surface-variant">2021
+                                                                        - 2023</span>
+                                                        </div>
+                                                        <div
+                                                                class="font-headline font-medium text-sm text-primary mb-3">
+                                                                The Educators</div>
+                                                        <p class="font-body text-on-surface-variant text-sm mb-4">
+                                                                Studied fundamental concepts of Computer Science.</p>
+                                                        <div
+                                                                class="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-lg w-fit border border-primary/20">
+                                                                <span
+                                                                        class="material-symbols-outlined text-sm text-primary">verified</span>
+                                                                <span
+                                                                        class="font-label text-xs font-bold text-primary tracking-wider uppercase">Grade:
+                                                                        A+</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Skills Section -->
+                <section class="py-section px-8 md:px-16 lg:px-32 fade-up-section" id="skills">
+                        <div class="max-w-6xl mx-auto">
+                                <h2 class="font-headline text-h2 text-on-surface mb-16 text-center">Core Skills</h2>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                                        <!-- Skill Card 1: Frontend -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">Frontend
+                                                </h3>
+                                        </div>
+                                        <!-- Skill Card 2: Backend -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">dns</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">Backend
+                                                </h3>
+                                        </div>
+                                        <!-- Skill Card 3: Python Programming -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">code</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">Python
+                                                        Programming</h3>
+                                        </div>
+                                        <!-- Skill Card 4: C++ Development -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">developer_board</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">C++
+                                                        Development</h3>
+                                        </div>
+                                        <!-- Skill Card 5: UI / UX -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">design_services</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">UI / UX
+                                                </h3>
+                                        </div>
+                                        <!-- Skill Card 6: Git & GitHub -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">account_tree</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">Git &
+                                                        GitHub</h3>
+                                        </div>
+                                        <!-- Skill Card 7: Technical Logic -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">hub</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">
+                                                        Technical Logic</h3>
+                                        </div>
+                                        <!-- Skill Card 8: Data Analysis (Pandas) -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">insights</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">Data
+                                                        Analysis (Pandas)</h3>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Services Section -->
+                <section class="py-section px-8 md:px-16 lg:px-32 bg-surface-container-lowest fade-up-section"
+                        id="services">
+                        <div class="max-w-6xl mx-auto">
+                                <h2 class="font-headline text-h2 text-on-surface mb-16 text-center">Services</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                        <!-- Service Card 1 -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-3xl p-8 flex flex-col hover:shadow-xl transition-all group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors mb-6">code</span>
+                                                <h3 class="font-headline font-bold text-xl text-on-surface mb-4">Web
+                                                        Development</h3>
+                                                <p class="font-body text-on-surface-variant mb-8 flex-grow">Building
+                                                        robust full-stack solutions for seamless digital experiences.
+                                                </p>
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Frontend</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Backend</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">HTML</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">CSS</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">JavaScript</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Python</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">C++</span>
+                                                </div>
+                                        </div>
+                                        <!-- Service Card 2 -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-3xl p-8 flex flex-col hover:shadow-xl transition-all group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors mb-6">design_services</span>
+                                                <h3 class="font-headline font-bold text-xl text-on-surface mb-4">UI &
+                                                        Graphic Design</h3>
+                                                <p class="font-body text-on-surface-variant mb-8 flex-grow">Crafting
+                                                        aesthetic user interfaces and stunning visual assets with a
+                                                        focus on experience.</p>
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Canva</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">PixelLab</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Picsart</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Lightroom</span>
+                                                </div>
+                                        </div>
+                                        <!-- Service Card 3 -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-3xl p-8 flex flex-col hover:shadow-xl transition-all group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors mb-6">psychology</span>
+                                                <h3 class="font-headline font-bold text-xl text-on-surface mb-4">Vibe
+                                                        Coding</h3>
+                                                <p class="font-body text-on-surface-variant mb-8 flex-grow">Leveraging
+                                                        advanced AI agents to rapidly prototype, iterate, and architect
+                                                        high-fidelity digital experiences at the speed of thought.</p>
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">AntiGravity</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Stitch</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Whisk</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">Claude</span>
+                                                        <span
+                                                                class="px-3 py-1.5 bg-surface-container rounded-full font-label text-xs text-on-surface-variant shadow-sm border border-outline-variant">ChatGPT</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Projects Section -->
+                <section class="py-section px-8 md:px-16 lg:px-32 fade-up-section" id="projects">
+                        <div class="max-w-6xl mx-auto">
+                                <div class="flex justify-between items-end mb-16">
+                                        <h2 class="font-headline text-h2 text-on-surface">Projects</h2>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <!-- Project Card 1 -->
+                                        <a href="https://student-dashboard-pi-beige.vercel.app/" target="_blank"
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                <div class="h-64 bg-surface-container-high relative overflow-hidden">
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                        </div>
+                                                        <img src="cognitive.jpeg" alt="The Cognitive Sanctuary"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                </div>
+                                                <div class="p-8">
+                                                        <h3
+                                                                class="font-headline text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                                                                The Cognitive Sanctuary</h3>
+                                                        <p class="font-body text-on-surface-variant mb-6 line-clamp-2">
+                                                                Next.js-based productivity application featuring a Deep
+                                                                Work Engine, Smart Search, and an Aesthetic Identity
+                                                                with a glassmorphic UI.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center gap-2">
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Next.js</span>
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Tailwind
+                                                                        CSS</span>
+                                                        </div>
+                                                </div>
+                                        </a>
+                                        <!-- Project Card 2 -->
+                                        <a href="https://rock-paper-scissors-cpp.vercel.app/" target="_blank"
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                <div class="h-64 bg-surface-container-high relative overflow-hidden">
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-br from-tertiary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                        </div>
+                                                        <img src="rps.jpeg" alt="Rock Paper Scissors"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                </div>
+                                                <div class="p-8">
+                                                        <h3
+                                                                class="font-headline text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                                                                Rock Paper Scissors Game</h3>
+                                                        <p class="font-body text-on-surface-variant mb-6 line-clamp-2">
+                                                                Web migration of C++ logic into a premium web
+                                                                application with custom icons, full glassmorphism UI,
+                                                                and smooth physics.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center gap-2">
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Vanilla
+                                                                        JS</span>
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">HTML/CSS</span>
+                                                        </div>
+                                                </div>
+                                        </a>
+                                        <!-- Project Card 3 -->
+                                        <a href="https://github.com/hurkazmi-cpp/Students_Habits_Analysis.py"
+                                                target="_blank"
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                <div class="h-64 bg-surface-container-high relative overflow-hidden">
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                        </div>
+                                                        <img src="Students_habits_analysis.jpeg"
+                                                                alt="Students Habits Analysis"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                </div>
+                                                <div class="p-8">
+                                                        <h3
+                                                                class="font-headline text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                                                                Students Habits Analysis</h3>
+                                                        <p class="font-body text-on-surface-variant mb-6 line-clamp-2">
+                                                                Data analysis project investigating the correlation
+                                                                between student lifestyle habits and exam performance.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center gap-2">
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Python</span>
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Pandas</span>
+                                                        </div>
+                                                </div>
+                                        </a>
+                                        <!-- Project Card 4 -->
+                                        <a href="https://ai-data-agent-lc5swpgd4vfgjxbpuemrgo.streamlit.app/"
+                                                target="_blank"
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                <div class="h-64 bg-surface-container-high relative overflow-hidden">
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-br from-tertiary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                        </div>
+                                                        <img src="Data agent SS.png" alt="AI Data Analyst"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                </div>
+                                                <div class="p-8">
+                                                        <h3
+                                                                class="font-headline text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                                                                AI Data Analyst</h3>
+                                                        <p class="font-body text-on-surface-variant mb-6 line-clamp-2">
+                                                                Stop fighting with Excel. Start talking to your data. 📊
+                                                                Built this Interactive AI Analyst to help businesses
+                                                                turn messy spreadsheets into professional charts
+                                                                instantly.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center gap-2">
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Python</span>
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Streamlit</span>
+                                                        </div>
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </section>
+                <!-- Certifications Section -->
+                <section class="py-section px-8 md:px-16 lg:px-32 bg-surface-container-lowest fade-up-section"
+                        id="certifications">
+                        <div class="max-w-6xl mx-auto">
+                                <h2 class="font-headline text-h2 text-on-surface mb-16 text-center">Certifications</h2>
+                                <div class="max-w-3xl mx-auto">
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-3xl overflow-hidden hover:shadow-xl transition-all group card-hover text-center relative">
+                                                <div
+                                                        class="w-full bg-surface-container-high relative flex items-center justify-center min-h-[300px]">
+                                                        <img src="certificate.jpg"
+                                                                alt="LUMSx Python For Beginners Certificate"
+                                                                class="w-full h-auto object-contain relative z-10" />
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                        </div>
+                                                </div>
+                                                <div class="p-8 relative z-10 bg-surface">
+                                                        <h3
+                                                                class="font-headline font-bold text-2xl text-on-surface mb-2">
+                                                                Python For Beginners</h3>
+                                                        <p class="font-body text-on-surface-variant">Completed
+                                                                foundational training in Python programming.</p>
+                                                        <span
+                                                                class="inline-block mt-6 px-5 py-2 bg-surface-container rounded-full font-label text-sm text-primary font-medium">Issued
+                                                                by LUMSx</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Contact Section -->
+                <section class="py-section px-8 md:px-16 lg:px-32 fade-up-section" id="contact">
+                        <div class="max-w-3xl mx-auto text-center">
+                                <h2 class="font-headline text-h2 text-on-surface mb-6">Let's Talk</h2>
+                                <p class="font-body text-on-surface-variant mb-12">Interested in collaborating or have a
+                                        project in mind? I'd love to hear from you.</p>
+                                <form action="https://formspree.io/f/xgodvkdg" method="POST"
+                                        class="bg-surface rounded-3xl p-8 md:p-12 shadow-sm border border-outline-variant text-left">
+                                        <div class="space-y-6">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        <div class="space-y-2">
+                                                                <label
+                                                                        class="font-label text-sm font-medium text-on-surface">Name</label>
+                                                                <input name="name" required
+                                                                        class="w-full bg-surface-container border border-outline-variant rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-on-surface"
+                                                                        placeholder="John Doe" type="text" />
+                                                        </div>
+                                                        <div class="space-y-2">
+                                                                <label
+                                                                        class="font-label text-sm font-medium text-on-surface">Email</label>
+                                                                <input name="email" required
+                                                                        class="w-full bg-surface-container border border-outline-variant rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-on-surface"
+                                                                        placeholder="john@example.com" type="email" />
+                                                        </div>
+                                                </div>
+                                                <div class="space-y-2">
+                                                        <label
+                                                                class="font-label text-sm font-medium text-on-surface">Message</label>
+                                                        <textarea name="message" required
+                                                                class="w-full bg-surface-container border border-outline-variant rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-on-surface resize-none"
+                                                                placeholder="Tell me about your project..."
+                                                                rows="5"></textarea>
+                                                </div>
+                                                <button class="btn-aura btn-aura-primary w-full py-4 bg-primary text-on-primary font-label font-bold rounded-xl hover:bg-primary/90 transition-colors shadow-sm"
+                                                        type="submit">
+                                                        Send Message
+                                                </button>
+                                        </div>
+                                </form>
+                        </div>
+                </section>
+        </main>
+        <footer
+                class="py-8 px-8 md:px-16 border-t border-outline-variant bg-background text-center flex flex-col md:flex-row justify-between items-center font-label text-sm text-on-surface-variant gap-4">
+                <div class="flex flex-col items-center md:items-start gap-1">
+                        <span>© 2026 Hur Abbas Kazmi. All rights reserved.</span>
+                        <div class="flex items-center gap-1.5 opacity-60 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Lahore, Punjab, Pakistan</span>
+                        </div>
+                </div>
+                <div class="flex gap-6">
+                        <a class="hover:text-primary transition-colors"
+                                href="https://www.linkedin.com/in/hur-abbas-kazmi-191407399/"
+                                target="_blank">LinkedIn</a>
+                        <a class="hover:text-primary transition-colors" href="https://github.com/hurkazmi-cpp"
+                                target="_blank">GitHub</a>
+                </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

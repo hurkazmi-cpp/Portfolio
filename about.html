@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>About - Hur Abbas Kazmi</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fira+Code:wght@400;500;700&display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "surface-tint": "#6366f1",
+                                                "surface-container-low": "#e5e7ed",
+                                                "on-surface": "#2e3040",
+                                                "error": "#dc2626",
+                                                "error-container": "#fee2e2",
+                                                "surface-container-high": "#dcdee4",
+                                                "on-secondary-container": "#585a68",
+                                                "tertiary": "#7c3aed",
+                                                "on-primary-fixed": "#1e1b4b",
+                                                "tertiary-fixed-dim": "#c4b5fd",
+                                                "tertiary-container": "#a78bfa",
+                                                "secondary-container": "#d8dae6",
+                                                "on-error-container": "#991b1b",
+                                                "on-tertiary-fixed": "#2e1065",
+                                                "surface-container-highest": "#d6d8de",
+                                                "surface-bright": "#edeef4",
+                                                "inverse-surface": "#2e3040",
+                                                "inverse-on-surface": "#e8eaf0",
+                                                "surface": "#e8eaf0",
+                                                "surface-variant": "#dcdee4",
+                                                "on-secondary-fixed-variant": "#404252",
+                                                "outline-variant": "#d0d2dc",
+                                                "on-primary-container": "#e0e2ff",
+                                                "primary-fixed-dim": "#a5b4fc",
+                                                "inverse-primary": "#a5b4fc",
+                                                "surface-container": "#e2e4ea",
+                                                "tertiary-fixed": "#ede9fe",
+                                                "background": "#e8eaf0",
+                                                "on-surface-variant": "#585a68",
+                                                "on-secondary-fixed": "#1a1b26",
+                                                "on-primary-fixed-variant": "#4338ca",
+                                                "surface-dim": "#d4d6dc",
+                                                "primary": "#6366f1",
+                                                "secondary-fixed-dim": "#b8baca",
+                                                "on-tertiary-container": "#3b1f63",
+                                                "secondary-fixed": "#d8dae6",
+                                                "on-error": "#ffffff",
+                                                "surface-container-lowest": "#f0f2f8",
+                                                "on-primary": "#ffffff",
+                                                "on-secondary": "#ffffff",
+                                                "on-background": "#2e3040",
+                                                "on-tertiary-fixed-variant": "#5b21b6",
+                                                "primary-container": "#818cf8",
+                                                "secondary": "#6c6e7e",
+                                                "primary-fixed": "#e0e2ff",
+                                                "outline": "#8a8c9a",
+                                                "on-tertiary": "#ffffff"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.5rem",
+                                                "lg": "1rem",
+                                                "xl": "1.5rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "section": "120px"
+                                        },
+                                        "fontFamily": {
+                                                "headline": ["Outfit", "sans-serif"],
+                                                "display": ["Outfit", "sans-serif"],
+                                                "body": ["Outfit", "sans-serif"],
+                                                "label": ["Fira Code", "monospace"]
+                                        },
+                                        "fontSize": {
+                                                "display": ["4rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                                                "h2": ["2.5rem", { "lineHeight": "1.2", "fontWeight": "600" }],
+                                                "h3": ["1.5rem", { "lineHeight": "1.3", "fontWeight": "600" }],
+                                                "body": ["1.125rem", { "lineHeight": "1.6", "fontWeight": "400" }]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden relative min-h-screen">
+        <!-- Top Navigation -->
+        <header
+                class="fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-8 md:px-16 z-50 bg-background/80 backdrop-blur-md border-b border-surface-variant transition-all duration-300">
+                <a href="index.html" class="flex items-center gap-4 group">
+                        <div
+                                class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-display font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                HK
+                        </div>
+                        <span
+                                class="font-headline font-bold text-xl text-primary hover:text-primary/80 transition-colors">Hur
+                                Abbas Kazmi</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8 font-label text-sm font-medium text-on-surface-variant">
+                        <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                        <a class="text-primary transition-colors" href="about.html">About</a>
+                        <a class="hover:text-primary transition-colors" href="index.html#projects">Projects</a>
+                        <a class="hover:text-primary transition-colors" href="index.html#education">Education</a>
+                        <a class="hover:text-primary transition-colors" href="index.html#skills">Skills</a>
+                        <a class="btn-aura btn-aura-primary px-6 py-2.5 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors shadow-sm"
+                                href="index.html#contact">Let's Talk</a>
+                </nav>
+                <button class="md:hidden text-on-surface-variant">
+                        <span class="material-symbols-outlined">menu</span>
+                </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="pt-20">
+                <section
+                        class="min-h-[90vh] flex flex-col justify-center items-center px-8 md:px-16 lg:px-32 relative fade-up-section py-24 md:py-32">
+                        <div class="max-w-4xl mx-auto z-10 w-full flex flex-col items-center text-center gap-16">
+                                <!-- Description -->
+                                <div class="space-y-6">
+                                        <h1
+                                                class="font-display text-5xl md:text-6xl font-bold text-on-surface leading-tight mb-6">
+                                                About Me
+                                        </h1>
+                                        <p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed"
+                                                id="about-description">
+                                                Hey! I'm Syed Muhammad Hur Abbas Kazmi - A CS undergraduate at UMT
+                                                specializing in Python and C++. I bridge academic research with modern
+                                                application development. Grounded in discrete logic and algorithmic
+                                                thinking, I embrace "vibe coding"—leveraging AI agents like Whisk and
+                                                Claude to rapidly prototype and iterate high-fidelity experiences at the
+                                                speed of thought.
+                                                <br><br>
+                                                This approach powers projects like my student dashboard, a cognitive
+                                                sanctuary built with AntiGravity and Stitch that seamlessly manages
+                                                complex data. Whether I'm analyzing academic habits using Pandas or
+                                                architecting fluid web interfaces, I bring a disciplined, analytical
+                                                mindset to build solutions that are both beautiful and grounded in solid
+                                                engineering.
+                                        </p>
+                                        <div
+                                                class="flex items-center justify-center gap-2 text-on-surface-variant opacity-80 mt-8">
+                                                <span
+                                                        class="material-symbols-outlined text-sm text-primary">location_on</span>
+                                                <span class="font-label text-xs uppercase tracking-widest">Lahore,
+                                                        Punjab, Pakistan</span>
+                                        </div>
+                                </div>
+
+                                <!-- 4 Rectangular Circles (Cards) -->
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full max-w-4xl">
+                                        <!-- GitHub -->
+                                        <a href="https://github.com/hurkazmi-cpp" target="_blank" id="link-github"
+                                                class="group bg-surface border border-outline-variant rounded-[2rem] p-6 flex flex-col items-center justify-center gap-4 hover:shadow-xl transition-all card-hover text-center h-48 w-full">
+                                                <div
+                                                        class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:scale-110 transition-transform duration-500">
+                                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                                                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity"
+                                                                alt="GitHub" />
+                                                </div>
+                                                <h3 class="font-headline font-bold text-lg text-on-surface">GitHub</h3>
+                                        </a>
+
+                                        <!-- LinkedIn -->
+                                        <a href="https://www.linkedin.com/in/hur-abbas-kazmi-191407399/" target="_blank"
+                                                class="group bg-surface border border-outline-variant rounded-[2rem] p-6 flex flex-col items-center justify-center gap-4 hover:shadow-xl transition-all card-hover text-center h-48 w-full">
+                                                <div
+                                                        class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:scale-110 transition-transform duration-500">
+                                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                                                                class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity"
+                                                                alt="LinkedIn" />
+                                                </div>
+                                                <h3 class="font-headline font-bold text-lg text-on-surface">LinkedIn
+                                                </h3>
+                                        </a>
+
+                                        <!-- Email -->
+                                        <a href="mailto:hurkazmi2006@gmail.com" id="link-email"
+                                                class="group bg-surface border border-outline-variant rounded-[2rem] p-6 flex flex-col items-center justify-center gap-4 hover:shadow-xl transition-all card-hover text-center h-48 w-full overflow-hidden">
+                                                <div
+                                                        class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:scale-110 transition-transform duration-500 shrink-0">
+                                                        <span class="material-symbols-outlined text-3xl">mail</span>
+                                                </div>
+                                                <h3
+                                                        class="font-headline font-bold text-[13px] md:text-sm text-on-surface whitespace-nowrap overflow-hidden text-ellipsis w-full px-2">
+                                                        hurkazmi2006@gmail.com</h3>
+                                        </a>
+
+                                        <!-- WhatsApp -->
+                                        <a href="https://wa.me/923201410319" id="link-whatsapp" target="_blank"
+                                                class="group bg-surface border border-outline-variant rounded-[2rem] p-6 flex flex-col items-center justify-center gap-4 hover:shadow-xl transition-all card-hover text-center h-48 w-full">
+                                                <div
+                                                        class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:scale-110 transition-transform duration-500 shrink-0">
+                                                        <svg class="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity fill-current"
+                                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                                                        </svg>
+                                                </div>
+                                                <h3 class="font-headline font-bold text-lg text-on-surface">0320-1410319
+                                                </h3>
+                                        </a>
+                                </div>
+                        </div>
+                </section>
+        </main>
+
+        <footer
+                class="py-8 px-8 md:px-16 border-t border-outline-variant bg-background text-center flex flex-col md:flex-row justify-between items-center font-label text-sm text-on-surface-variant gap-4">
+                <div class="flex flex-col items-center md:items-start gap-1">
+                        <span>© 2026 Hur Abbas Kazmi. All rights reserved.</span>
+                        <div class="flex items-center gap-1.5 opacity-60 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Lahore, Punjab, Pakistan</span>
+                        </div>
+                </div>
+                <div class="flex gap-6">
+                        <a class="hover:text-primary transition-colors"
+                                href="https://www.linkedin.com/in/hur-abbas-kazmi-191407399/"
+                                target="_blank">LinkedIn</a>
+                        <a class="hover:text-primary transition-colors" href="https://github.com/hurkazmi-cpp"
+                                target="_blank">GitHub</a>
+                </div>
+        </footer>
+
+        <!-- Vanilla Tilt JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
