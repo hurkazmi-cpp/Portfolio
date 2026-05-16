@@ -18,8 +18,8 @@ html {
 /* Fade Up Animation */
 .fade-up-section {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.2, 0, 0, 1), transform 1s cubic-bezier(0.2, 0, 0, 1);
     will-change: opacity, transform;
 }
 
