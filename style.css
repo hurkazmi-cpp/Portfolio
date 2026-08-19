@@ -143,3 +143,74 @@ html {
     from, to { opacity: 1; }
     50% { opacity: 0; }
 }
+
+/* Certifications Carousel (Coverflow) */
+.cert-track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 0 2.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.cert-track::-webkit-scrollbar {
+    display: none;
+}
+
+.cert-spacer {
+    flex: 0 0 auto;
+    width: 0px;
+}
+
+.cert-card {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    flex: 0 0 auto;
+    width: 300px;
+    transform-origin: center center;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                filter 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+}
+
+@media (min-width: 640px) {
+    .cert-card {
+        width: 420px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cert-card {
+        width: 480px;
+    }
+}
+
+.cert-nav-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cert-nav-btn:hover {
+    transform: scale(1.08);
+}
+
+.cert-nav-btn:active {
+    transform: scale(0.95);
+}
+
+.cert-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.25);
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.cert-dot.active {
+    width: 26px;
+    background: #6366f1;
+}
