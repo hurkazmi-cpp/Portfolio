@@ -598,6 +598,22 @@
                                                 <h3 class="font-headline font-bold text-on-surface text-center">Data
                                                         Analysis (Pandas)</h3>
                                         </div>
+                                        <!-- Skill Card 9: AI Automation -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">bolt</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">AI
+                                                        Automation</h3>
+                                        </div>
+                                        <!-- Skill Card 10: Cloud Deployment -->
+                                        <div
+                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                <span
+                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">cloud_upload</span>
+                                                <h3 class="font-headline font-bold text-on-surface text-center">Cloud
+                                                        Deployment</h3>
+                                        </div>
                                 </div>
                         </div>
                 </section>
@@ -681,54 +697,292 @@
                         </div>
                 </section>
                 <!-- Featured Section -->
+                <style>
+                        .feat-track {
+                                display: flex;
+                                overflow-x: auto;
+                                scroll-snap-type: x mandatory;
+                                -ms-overflow-style: none;
+                                scrollbar-width: none;
+                                padding: 1rem 0 2rem;
+                        }
+                        .feat-track::-webkit-scrollbar { display: none; }
+                        .feat-card {
+                                display: block;
+                                flex: 0 0 auto;
+                                width: min(90vw, 640px);
+                                scroll-snap-align: center;
+                                transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+                                margin: 0 1rem;
+                        }
+                        .feat-spacer { flex: 0 0 auto; }
+                        .feat-nav-btn { transition: all 0.2s ease; }
+                        .feat-nav-btn:hover { transform: translateY(-50%) scale(1.08); }
+                        .feat-dot {
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 9999px;
+                                background: var(--tw-color-outline, #8a8c9a);
+                                opacity: 0.4;
+                                transition: all 0.3s ease;
+                                border: none;
+                                cursor: pointer;
+                        }
+                        .feat-dot.active {
+                                opacity: 1;
+                                width: 22px;
+                                background: #6366f1;
+                        }
+                </style>
                 <section class="py-section px-8 md:px-16 lg:px-32 fade-up-section bg-surface-container-lowest bg-grid-subtle"
                         id="featured">
                         <div class="max-w-6xl mx-auto">
-                                <h2 class="font-headline text-h2 text-on-surface mb-16 text-center">Featured Project
+                                <h2 class="font-headline text-h2 text-on-surface mb-4 text-center">Featured Projects
                                 </h2>
-                                <div class="flex justify-center">
-                                        <a href="https://j-a-r-v-i-s-eosin.vercel.app/" target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-2 card-hover block max-w-2xl w-full">
-                                                <div
-                                                        class="h-[280px] bg-surface-container-high relative overflow-hidden">
+                                <p class="font-body text-on-surface-variant text-center mb-4 max-w-xl mx-auto">Scroll
+                                        or use the arrows to explore.</p>
+                                <div class="relative">
+                                        <div class="feat-track" id="feat-track">
+                                                <div class="feat-spacer" aria-hidden="true"></div>
+                                                <!-- Featured Card: AI Customer Intake Automation (n8n) -->
+                                                <div class="feat-card">
                                                         <div
-                                                                class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                                class="card-hover bg-surface rounded-3xl overflow-hidden border border-outline-variant h-full">
+                                                                <div
+                                                                        class="h-[280px] bg-surface-container-high relative overflow-hidden">
+                                                                        <img src="n8n-automation.png"
+                                                                                alt="AI Customer Intake Automation Workflow"
+                                                                                class="w-full h-full object-cover" />
+                                                                </div>
+                                                                <div class="p-8 text-center">
+                                                                        <div
+                                                                                class="inline-flex items-center gap-2 px-2.5 py-1 bg-primary/10 rounded-full text-primary font-label text-[10px] font-bold uppercase tracking-wider mb-4">
+                                                                                <span
+                                                                                        class="material-symbols-outlined text-[14px]">star</span>
+                                                                                Featured
+                                                                        </div>
+                                                                        <h3
+                                                                                class="font-headline text-2xl font-bold text-on-surface mb-3">
+                                                                                AI Customer Intake Automation
+                                                                        </h3>
+                                                                        <p
+                                                                                class="font-body text-base text-on-surface-variant mb-6 max-w-xl mx-auto">
+                                                                                An end-to-end n8n workflow that
+                                                                                analyzes new customer inquiries with
+                                                                                AI, logs them to a CRM, sends an
+                                                                                instant confirmation email, and
+                                                                                follows up automatically — with zero
+                                                                                manual work after the form is
+                                                                                submitted.
+                                                                        </p>
+                                                                        <div
+                                                                                class="flex flex-wrap justify-center items-center gap-2.5 mb-8">
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">n8n</span>
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Google
+                                                                                        Gemini</span>
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Google
+                                                                                        Sheets</span>
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Gmail
+                                                                                        API</span>
+                                                                        </div>
+                                                                        <div
+                                                                                class="flex flex-wrap justify-center items-center gap-3">
+                                                                                <a href="https://www.loom.com/share/c37cccc827a044878a6e7f74fa6002f6"
+                                                                                        target="_blank"
+                                                                                        class="btn-aura inline-flex items-center gap-2 px-5 py-2.5 bg-surface-container rounded-full font-label text-sm font-medium text-on-surface border border-outline-variant hover:border-primary hover:text-primary transition-colors">
+                                                                                        <span
+                                                                                                class="material-symbols-outlined text-[16px]">play_circle</span>
+                                                                                        View Demo Video
+                                                                                </a>
+                                                                                <a href="https://github.com/hurkazmi-cpp/ai-customer-intake-automation"
+                                                                                        target="_blank"
+                                                                                        class="btn-aura btn-aura-primary inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-on-primary rounded-full font-label text-sm font-medium hover:bg-primary/90 transition-colors">
+                                                                                        <span
+                                                                                                class="material-symbols-outlined text-[16px]">code</span>
+                                                                                        View Code
+                                                                                </a>
+                                                                        </div>
+                                                                </div>
                                                         </div>
-                                                        <img src="jarvis.png" alt="J.A.R.V.I.S. Dashboard"
-                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                                 </div>
-                                                <div class="p-8 text-center">
-                                                        <div
-                                                                class="inline-flex items-center gap-2 px-2.5 py-1 bg-primary/10 rounded-full text-primary font-label text-[10px] font-bold uppercase tracking-wider mb-4">
-                                                                <span
-                                                                        class="material-symbols-outlined text-[14px]">star</span>
-                                                                Featured
-                                                        </div>
-                                                        <h3
-                                                                class="font-headline text-2xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
-                                                                J.A.R.V.I.S. Interactive Dashboard
-                                                        </h3>
-                                                        <p
-                                                                class="font-body text-base text-on-surface-variant mb-6 max-w-xl mx-auto">
-                                                                A futuristic, high-fidelity J.A.R.V.I.S dashboard
-                                                                featuring interactive voice intelligence, real-time
-                                                                weather data, and a stunning voice-reactive 3D plasma
-                                                                core.
-                                                        </p>
-                                                        <div class="flex flex-wrap justify-center items-center gap-2.5">
-                                                                <span
-                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">React.js</span>
-                                                                <span
-                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Three.js</span>
-                                                                <span
-                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Groq
-                                                                        AI</span>
-                                                        </div>
+                                                <!-- Featured Card: JARVIS -->
+                                                <div class="feat-card">
+                                                        <a href="https://j-a-r-v-i-s-eosin.vercel.app/"
+                                                                target="_blank"
+                                                                class="card-hover group bg-surface rounded-3xl overflow-hidden border border-outline-variant block h-full">
+                                                                <div
+                                                                        class="h-[280px] bg-surface-container-high relative overflow-hidden">
+                                                                        <div
+                                                                                class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                                        </div>
+                                                                        <img src="jarvis.png"
+                                                                                alt="J.A.R.V.I.S. Dashboard"
+                                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                                                </div>
+                                                                <div class="p-8 text-center">
+                                                                        <div
+                                                                                class="inline-flex items-center gap-2 px-2.5 py-1 bg-primary/10 rounded-full text-primary font-label text-[10px] font-bold uppercase tracking-wider mb-4">
+                                                                                <span
+                                                                                        class="material-symbols-outlined text-[14px]">star</span>
+                                                                                Featured
+                                                                        </div>
+                                                                        <h3
+                                                                                class="font-headline text-2xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                                                                                J.A.R.V.I.S. Interactive Dashboard
+                                                                        </h3>
+                                                                        <p
+                                                                                class="font-body text-base text-on-surface-variant mb-6 max-w-xl mx-auto">
+                                                                                A futuristic, high-fidelity J.A.R.V.I.S
+                                                                                dashboard featuring interactive voice
+                                                                                intelligence, real-time weather data,
+                                                                                and a stunning voice-reactive 3D
+                                                                                plasma core.
+                                                                        </p>
+                                                                        <div
+                                                                                class="flex flex-wrap justify-center items-center gap-2.5">
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">React.js</span>
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Three.js</span>
+                                                                                <span
+                                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant border border-outline-variant">Groq
+                                                                                        AI</span>
+                                                                        </div>
+                                                                </div>
+                                                        </a>
                                                 </div>
-                                        </a>
+                                                <div class="feat-spacer" aria-hidden="true"></div>
+                                        </div>
+                                        <!-- Nav Buttons -->
+                                        <button type="button" id="feat-prev"
+                                                class="feat-nav-btn flex items-center justify-center absolute left-2 md:left-[-1.5rem] top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-surface border border-outline-variant shadow-md hover:shadow-lg text-on-surface-variant hover:text-primary z-20"
+                                                aria-label="Previous project">
+                                                <span class="material-symbols-outlined">chevron_left</span>
+                                        </button>
+                                        <button type="button" id="feat-next"
+                                                class="feat-nav-btn flex items-center justify-center absolute right-2 md:right-[-1.5rem] top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-surface border border-outline-variant shadow-md hover:shadow-lg text-on-surface-variant hover:text-primary z-20"
+                                                aria-label="Next project">
+                                                <span class="material-symbols-outlined">chevron_right</span>
+                                        </button>
                                 </div>
+                                <!-- Dots -->
+                                <div id="feat-dots" class="flex items-center justify-center gap-2 mt-2"></div>
                         </div>
                 </section>
+                <script>
+                        (function () {
+                                const track = document.getElementById('feat-track');
+                                const cards = Array.from(track.querySelectorAll('.feat-card'));
+                                const spacers = Array.from(track.querySelectorAll('.feat-spacer'));
+                                const dotsWrap = document.getElementById('feat-dots');
+                                const prevBtn = document.getElementById('feat-prev');
+                                const nextBtn = document.getElementById('feat-next');
+
+                                cards.forEach((_, i) => {
+                                        const dot = document.createElement('button');
+                                        dot.type = 'button';
+                                        dot.className = 'feat-dot';
+                                        dot.setAttribute('aria-label', 'Go to project ' + (i + 1));
+                                        dot.addEventListener('click', () => scrollToIndex(i));
+                                        dotsWrap.appendChild(dot);
+                                });
+                                const dots = Array.from(dotsWrap.querySelectorAll('.feat-dot'));
+
+                                function sizeSpacers() {
+                                        const trackWidth = track.clientWidth;
+                                        const cardWidth = cards[0].getBoundingClientRect().width;
+                                        const spacerWidth = Math.max(0, (trackWidth - cardWidth) / 2);
+                                        spacers.forEach(s => { s.style.width = spacerWidth + 'px'; });
+                                }
+
+                                function closestIndex() {
+                                        const trackRect = track.getBoundingClientRect();
+                                        const center = trackRect.left + trackRect.width / 2;
+                                        let idx = 0, dist = Infinity;
+                                        cards.forEach((c, i) => {
+                                                const r = c.getBoundingClientRect();
+                                                const d = Math.abs((r.left + r.width / 2) - center);
+                                                if (d < dist) { dist = d; idx = i; }
+                                        });
+                                        return idx;
+                                }
+
+                                function scrollToIndex(i) {
+                                        const card = cards[i];
+                                        const trackRect = track.getBoundingClientRect();
+                                        const cardRect = card.getBoundingClientRect();
+                                        const offset = (cardRect.left + cardRect.width / 2) - (trackRect.left + trackRect.width / 2);
+                                        track.scrollTo({ left: track.scrollLeft + offset, behavior: 'smooth' });
+                                }
+
+                                let ticking = false;
+                                function updateScale() {
+                                        const trackRect = track.getBoundingClientRect();
+                                        const center = trackRect.left + trackRect.width / 2;
+                                        let closest = 0;
+                                        let closestDist = Infinity;
+
+                                        cards.forEach((card, i) => {
+                                                const cardRect = card.getBoundingClientRect();
+                                                const cardCenter = cardRect.left + cardRect.width / 2;
+                                                const dist = Math.abs(cardCenter - center);
+                                                const norm = Math.min(dist / (trackRect.width / 2), 1);
+
+                                                const scale = 1 - norm * 0.42;
+                                                const opacity = 1 - norm * 0.75;
+                                                const blur = norm * 2.5;
+
+                                                card.style.transform = 'scale(' + scale.toFixed(3) + ')';
+                                                card.style.opacity = Math.max(0.25, opacity).toFixed(3);
+                                                card.style.filter = 'blur(' + blur.toFixed(2) + 'px)';
+                                                card.style.zIndex = String(100 - Math.round(norm * 100));
+
+                                                if (dist < closestDist) {
+                                                        closestDist = dist;
+                                                        closest = i;
+                                                }
+                                        });
+
+                                        dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+                                        ticking = false;
+                                }
+
+                                function onScroll() {
+                                        if (!ticking) {
+                                                requestAnimationFrame(updateScale);
+                                                ticking = true;
+                                        }
+                                }
+
+                                track.addEventListener('scroll', onScroll, { passive: true });
+                                window.addEventListener('resize', () => {
+                                        sizeSpacers();
+                                        updateScale();
+                                });
+
+                                prevBtn.addEventListener('click', () => {
+                                        scrollToIndex(Math.max(0, closestIndex() - 1));
+                                });
+                                nextBtn.addEventListener('click', () => {
+                                        scrollToIndex(Math.min(cards.length - 1, closestIndex() + 1));
+                                });
+
+                                sizeSpacers();
+                                requestAnimationFrame(() => {
+                                        scrollToIndex(0);
+                                        updateScale();
+                                });
+                                window.addEventListener('load', () => {
+                                        sizeSpacers();
+                                        scrollToIndex(0);
+                                        updateScale();
+                                });
+                        })();
+                </script>
 
                 <!-- Projects Section -->
                 <section class="py-section px-8 md:px-16 lg:px-32 fade-up-section" id="projects">
@@ -737,6 +991,51 @@
                                         <h2 class="font-headline text-h2 text-on-surface">Projects</h2>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <!-- Project Card: AI Customer Intake Automation (n8n) -->
+                                        <div
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                <div class="h-64 bg-surface-container-high relative overflow-hidden">
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                                                        </div>
+                                                        <img src="n8n-automation.png"
+                                                                alt="AI Customer Intake Automation Workflow"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                </div>
+                                                <div class="p-8">
+                                                        <h3
+                                                                class="font-headline text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                                                                AI Customer Intake Automation</h3>
+                                                        <p class="font-body text-on-surface-variant mb-6 line-clamp-2">
+                                                                An n8n workflow that uses AI to analyze new customer
+                                                                inquiries, logs them to a CRM, and sends automated
+                                                                confirmation and follow-up emails.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center gap-2 mb-6">
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">n8n</span>
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Google
+                                                                        Gemini</span>
+                                                        </div>
+                                                        <div class="flex flex-wrap items-center gap-3">
+                                                                <a href="https://www.loom.com/share/c37cccc827a044878a6e7f74fa6002f6"
+                                                                        target="_blank"
+                                                                        class="inline-flex items-center gap-1.5 px-4 py-2 bg-surface-container rounded-full font-label text-xs font-medium text-on-surface border border-outline-variant hover:border-primary hover:text-primary transition-colors">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-[14px]">play_circle</span>
+                                                                        Demo
+                                                                </a>
+                                                                <a href="https://github.com/hurkazmi-cpp/ai-customer-intake-automation"
+                                                                        target="_blank"
+                                                                        class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary rounded-full font-label text-xs font-medium hover:bg-primary/90 transition-colors">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-[14px]">code</span>
+                                                                        Code
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                        </div>
                                         <!-- Project Card: JARVIS -->
                                         <a href="https://j-a-r-v-i-s-eosin.vercel.app/" target="_blank"
                                                 class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
