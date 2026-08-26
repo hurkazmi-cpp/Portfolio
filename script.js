@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // Safety net: if a section is somehow still stuck at opacity 0 a few
+    // seconds after load (e.g. very tall mobile sections, or edge-case
+    // viewport resize timing), force it visible so content is never
+    // permanently hidden.
+    setTimeout(() => {
+        sections.forEach(section => {
+            if (!section.classList.contains('visible')) {
+                section.classList.add('visible');
+            }
+        });
+    }, 2500);
 
     // Animate the hero section immediately on load if it's already in view
     const heroSection = document.getElementById('about');
