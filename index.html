@@ -96,6 +96,8 @@
 </head>
 
 <body class="bg-background text-on-surface font-body overflow-x-hidden relative min-h-screen">
+        <!-- Scroll progress bar -->
+        <div id="scroll-progress" class="scroll-progress"></div>
         <!-- Top Navigation -->
         <header
                 class="fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-8 md:px-16 z-50 bg-background/80 backdrop-blur-md border-b border-surface-variant transition-all duration-300">
@@ -465,110 +467,128 @@
                 <!-- Skills Section -->
                 <section class="py-section px-8 md:px-16 lg:px-32 fade-up-section" id="skills">
                         <div class="max-w-6xl mx-auto">
-                                <h2 class="font-headline text-h2 text-on-surface mb-16 text-center">Core Skills</h2>
-                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                                        <!-- Skill Card 1: Frontend -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 pt-12 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover relative overflow-hidden">
-                                                <!-- Large AI Driven Badge -->
-                                                <div class="absolute top-0 right-0">
+                                <h2 class="font-headline text-h2 text-on-surface mb-4 text-center">Core Skills</h2>
+                                <p class="font-body text-on-surface-variant text-center mb-16 max-w-xl mx-auto">
+                                        A snapshot of the languages, tools, and workflows I build with.</p>
+
+                                <div class="flex flex-col gap-14">
+
+                                        <!-- Category: Core Development -->
+                                        <div>
+                                                <div class="flex items-center gap-3 mb-6">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-2xl">code_blocks</span>
+                                                        <h3 class="font-headline text-lg font-bold text-on-surface">
+                                                                Core Development</h3>
+                                                </div>
+                                                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                                                         <div
-                                                                class="bg-primary/20 border-l border-b border-primary/30 px-3 py-1.5 rounded-bl-2xl flex items-center gap-1.5 shadow-md backdrop-blur-sm group-hover:bg-primary/30 transition-colors">
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
                                                                 <span
-                                                                        class="material-symbols-outlined text-[18px] text-primary animate-pulse">auto_awesome</span>
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Frontend</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
                                                                 <span
-                                                                        class="text-[9px] font-black text-primary uppercase tracking-[0.1em]">AI
-                                                                        Driven</span>
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">dns</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Backend</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                                <span
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">code</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Python Programming</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                                <span
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">developer_board</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        C++ Development</h4>
                                                         </div>
                                                 </div>
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Frontend
-                                                </h3>
                                         </div>
-                                        <!-- Skill Card 2: Backend -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 pt-12 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover relative overflow-hidden">
-                                                <!-- Large AI Driven Badge -->
-                                                <div class="absolute top-0 right-0">
+
+                                        <!-- Category: AI & Automation -->
+                                        <div>
+                                                <div class="flex items-center gap-3 mb-6">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+                                                        <h3 class="font-headline text-lg font-bold text-on-surface">
+                                                                AI &amp; Automation</h3>
+                                                </div>
+                                                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                                                         <div
-                                                                class="bg-primary/20 border-l border-b border-primary/30 px-3 py-1.5 rounded-bl-2xl flex items-center gap-1.5 shadow-md backdrop-blur-sm group-hover:bg-primary/30 transition-colors">
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
                                                                 <span
-                                                                        class="material-symbols-outlined text-[18px] text-primary animate-pulse">auto_awesome</span>
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">chat</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Prompt Engineering</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
                                                                 <span
-                                                                        class="text-[9px] font-black text-primary uppercase tracking-[0.1em]">AI
-                                                                        Driven</span>
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">psychology</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        AI Integration</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                                <span
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">bolt</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        AI Automation</h4>
                                                         </div>
                                                 </div>
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">dns</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Backend
-                                                </h3>
                                         </div>
-                                        <!-- Skill Card 3: Python Programming -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">code</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Python
-                                                        Programming</h3>
+
+                                        <!-- Category: Data & Infrastructure -->
+                                        <div>
+                                                <div class="flex items-center gap-3 mb-6">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary text-2xl">database</span>
+                                                        <h3 class="font-headline text-lg font-bold text-on-surface">
+                                                                Data &amp; Infrastructure</h3>
+                                                </div>
+                                                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                                <span
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">manage_search</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Web Scraping (Selenium &amp; BeautifulSoup)</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                                <span
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">insights</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Data Analysis (Pandas)</h4>
+                                                        </div>
+                                                        <div
+                                                                class="skill-tile bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
+                                                                <span
+                                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">cloud_upload</span>
+                                                                <h4
+                                                                        class="font-headline font-bold text-sm text-on-surface text-center">
+                                                                        Cloud Deployment</h4>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <!-- Skill Card 4: C++ Development -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">developer_board</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">C++
-                                                        Development</h3>
-                                        </div>
-                                        <!-- Skill Card 5: Prompt Engineering -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">chat</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Prompt
-                                                        Engineering</h3>
-                                        </div>
-                                        <!-- Skill Card 6: Web scraping -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors">manage_search</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Web
-                                                        Scraping (Selenium & Beautiful soup)</h3>
-                                        </div>
-                                        <!-- Skill Card 7: AI Integration -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">psychology</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">
-                                                        AI Integration</h3>
-                                        </div>
-                                        <!-- Skill Card 8: Data Analysis (Pandas) -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">insights</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Data
-                                                        Analysis (Pandas)</h3>
-                                        </div>
-                                        <!-- Skill Card 9: AI Automation -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">bolt</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">AI
-                                                        Automation</h3>
-                                        </div>
-                                        <!-- Skill Card 10: Cloud Deployment -->
-                                        <div
-                                                class="bg-surface border border-outline-variant rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1 group card-hover">
-                                                <span
-                                                        class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors">cloud_upload</span>
-                                                <h3 class="font-headline font-bold text-on-surface text-center">Cloud
-                                                        Deployment</h3>
-                                        </div>
+
                                 </div>
                         </div>
                 </section>
@@ -1158,12 +1178,21 @@
                                 <div class="flex justify-between items-end mb-16">
                                         <h2 class="font-headline text-h2 text-on-surface">Projects</h2>
                                 </div>
+                                <div class="flex flex-wrap items-center justify-center gap-3 mb-12" id="project-filter-bar">
+                                        <button type="button" class="project-filter-btn active" data-filter="all">All</button>
+                                        <button type="button" class="project-filter-btn" data-filter="web-apps">Web Apps</button>
+                                        <button type="button" class="project-filter-btn" data-filter="web-scraping">Web Scraping</button>
+                                        <button type="button" class="project-filter-btn" data-filter="data-analysis">Data Analysis</button>
+                                        <button type="button" class="project-filter-btn" data-filter="ai-agents">AI & Agents</button>
+                                        <button type="button" class="project-filter-btn" data-filter="job-simulations">Job Simulations</button>
+                                </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <!-- Project Card: Multi-Page E-Commerce Analytics Pipeline -->
                                         <div
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block flex flex-col h-full">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block flex flex-col h-full project-tilt" data-category="web-scraping">
                                                 <div
                                                         class="h-64 bg-surface-container-high relative overflow-hidden shrink-0">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Web Scraping</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1190,6 +1219,8 @@
                                                                 </p>
                                                                 <div class="flex flex-wrap items-center gap-2 mb-6">
                                                                         <span
+                                                                                class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Web Scraping</span>
+                                                                        <span
                                                                                 class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Python</span>
                                                                         <span
                                                                                 class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Selenium</span>
@@ -1212,9 +1243,10 @@
                                         </div>
                                         <!-- Project Card: Dynamic Sports Data Pipeline & Harvester -->
                                         <div
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block flex flex-col h-full">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block flex flex-col h-full project-tilt" data-category="web-scraping">
                                                 <div
                                                         class="h-64 bg-surface-container-high relative overflow-hidden shrink-0">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Web Scraping</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1239,6 +1271,8 @@
                                                                 </p>
                                                                 <div class="flex flex-wrap items-center gap-2 mb-6">
                                                                         <span
+                                                                                class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Web Scraping</span>
+                                                                        <span
                                                                                 class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Python</span>
                                                                         <span
                                                                                 class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Selenium</span>
@@ -1261,8 +1295,9 @@
                                         </div>
                                         <!-- Project Card: E-Commerce Product Scraper (Selenium + BeautifulSoup) -->
                                         <div
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="web-scraping">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Web Scraping</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1281,6 +1316,8 @@
                                                                 titles, prices, and links into a clean CSV dataset.
                                                         </p>
                                                         <div class="flex flex-wrap items-center gap-2 mb-6">
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Web Scraping</span>
                                                                 <span
                                                                         class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Python</span>
                                                                 <span
@@ -1301,8 +1338,9 @@
                                         </div>
                                         <!-- Project Card: Free Local AI Employee (n8n + Ollama) -->
                                         <div
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="ai-agents">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">AI & Agents</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1347,8 +1385,9 @@
                                         </div>
                                         <!-- Project Card: AI Customer Intake Automation (n8n) -->
                                         <div
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="ai-agents">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">AI & Agents</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1392,8 +1431,9 @@
                                         </div>
                                         <!-- Project Card: JARVIS -->
                                         <a href="https://j-a-r-v-i-s-eosin.vercel.app/" target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="web-apps">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Web Apps</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1418,34 +1458,40 @@
                                                         </div>
                                                 </div>
                                         </a>
-                                        <!-- Project Card: Kudos System (Spec-Driven Development, Datacom Forage) -->
+                                        <!-- Project Card: Datacom Spec-Driven Development Simulation (Forage)-->
                                         <div
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="job-simulations">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Job Simulations</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
                                                         <img src="input_file_0.png"
-                                                                alt="Kudos System Dashboard Screenshot"
+                                                                alt="Datacom Spec-Driven Development Simulation"
                                                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 </div>
                                                 <div class="p-8">
                                                         <h3
                                                                 class="font-headline text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
-                                                                Kudos System (Spec-Driven Development)</h3>
+                                                                Datacom Spec-Driven Development Simulation (Forage Simulation)
+                                                        </h3>
                                                         <p class="font-body text-on-surface-variant mb-6 line-clamp-2">
-                                                                An internal employee-recognition app built via a
-                                                                spec-first workflow: reviewed and refined an
-                                                                AI-generated specification (adding an admin
-                                                                content-moderation system) before implementation.
+                                                                Architected technical specs (user stories, schema, API
+                                                                endpoints) for a kudos feature, integrating content
+                                                                moderation, admin roles, and audit logging before code
+                                                                execution.
                                                         </p>
                                                         <div class="flex flex-wrap items-center gap-2 mb-6">
                                                                 <span
-                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">React</span>
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">System
+                                                                        Architecture</span>
                                                                 <span
                                                                         class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Node.js</span>
                                                                 <span
-                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Express</span>
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">React</span>
+                                                                <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">API
+                                                                        Design</span>
                                                         </div>
                                                         <div class="flex flex-wrap items-center gap-3">
                                                                 <a href="https://youtu.be/Nnut5Wee_dQ" target="_blank"
@@ -1454,8 +1500,7 @@
                                                                                 class="material-symbols-outlined text-[14px]">play_circle</span>
                                                                         Demo
                                                                 </a>
-                                                                <a href="https://github.com/hurkazmi-cpp/Kudos-System-Forage-Datacom-Job-Simulation-Task-2"
-                                                                        target="_blank"
+                                                                <a href="https://github.com/hurkazmi-cpp/Kudos-System-Forage-Datacom-Job-Simulation-Task-2" target="_blank"
                                                                         class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary rounded-full font-label text-xs font-medium hover:bg-primary/90 transition-colors">
                                                                         <span
                                                                                 class="material-symbols-outlined text-[14px]">code</span>
@@ -1467,8 +1512,9 @@
                                         <!-- Project Card: Datacom Automation AI Accelerator (Forage) -->
                                         <a href="https://github.com/hurkazmi-cpp/Datacom-Automation-AI-Accelerator-Forage-Job-Simulation"
                                                 target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="job-simulations">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Job Simulations</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1497,8 +1543,9 @@
                                         </a>
                                         <!-- Project Card 1 -->
                                         <a href="https://student-dashboard-pi-beige.vercel.app/" target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="web-apps">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Web Apps</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1525,8 +1572,9 @@
                                         </a>
                                         <!-- Project Card 2 -->
                                         <a href="https://rock-paper-scissors-cpp.vercel.app/" target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="web-apps">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Web Apps</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-tertiary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1554,8 +1602,9 @@
                                         <!-- Project Card 3 -->
                                         <a href="https://github.com/hurkazmi-cpp/Students_Habits_Analysis.py"
                                                 target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="data-analysis">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">Data Analysis</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1573,6 +1622,8 @@
                                                         </p>
                                                         <div class="flex flex-wrap items-center gap-2">
                                                                 <span
+                                                                        class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Data Analysis</span>
+                                                                <span
                                                                         class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Python</span>
                                                                 <span
                                                                         class="px-3 py-1 bg-surface-container rounded-full font-label text-xs text-on-surface-variant">Pandas</span>
@@ -1582,8 +1633,9 @@
                                         <!-- Project Card 4 -->
                                         <a href="https://ai-data-agent-lc5swpgd4vfgjxbpuemrgo.streamlit.app/"
                                                 target="_blank"
-                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block">
+                                                class="group bg-surface rounded-3xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all duration-500 hover:-translate-y-1 card-hover block project-tilt" data-category="ai-agents">
                                                 <div class="h-64 bg-surface-container-high relative overflow-hidden">
+										<span class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-sm border border-outline-variant font-label text-xs font-medium text-on-surface-variant shadow-sm">AI & Agents</span>
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-br from-tertiary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                                         </div>
@@ -1642,50 +1694,29 @@
                                                                         by LUMSx</span>
                                                         </div>
                                                 </div>
-                                                <!-- Certificate Card 2: Datacom Automation AI Accelerator -->
-                                                <div class="cert-card flex-none w-[320px] md:w-[380px] snap-center">
+                                                <!-- Certificate 2: Datacom Automation AI Accelerator (Forage) -->
+                                                <div
+                                                        class="cert-card bg-surface border border-outline-variant rounded-3xl overflow-hidden text-center relative">
                                                         <div
-                                                                class="card-hover bg-[#E9ECEF] border border-outline-variant/40 rounded-3xl overflow-hidden flex flex-col h-full group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-
-                                                                <!-- Top Half: Edge-to-Edge Image -->
-                                                                <div class="w-full bg-white overflow-hidden">
-                                                                        <img src="page_1.png"
-                                                                                alt="Datacom Automation AI Accelerator Certificate"
-                                                                                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" />
-                                                                </div>
-
-                                                                <!-- Bottom Half: Centered Content Area -->
-                                                                <div
-                                                                        class="p-6 flex flex-col items-center text-center justify-between flex-grow">
-                                                                        <div>
-                                                                                <!-- Title -->
-                                                                                <h3
-                                                                                        class="font-headline font-bold text-xl text-on-surface mb-3 group-hover:text-primary transition-colors">
-                                                                                        Automation AI Accelerator
-                                                                                </h3>
-
-                                                                                <!-- Subtitle / Description -->
-                                                                                <p
-                                                                                        class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
-                                                                                        Engineered autonomous agent
-                                                                                        solutions, diagnosed complex
-                                                                                        legacy Python bugs using AI
-                                                                                        co-pilots.
-                                                                                </p>
-                                                                        </div>
-
-                                                                        <!-- Issued By Centered Pill Badge -->
-                                                                        <div class="w-full flex justify-center pt-2">
-                                                                                <span
-                                                                                        class="inline-flex items-center gap-1.5 px-6 py-2 bg-[#E2E6EA] border border-outline-variant/30 text-primary font-mono text-sm font-semibold rounded-full tracking-wide">
-                                                                                        Issued by Datacom (Forage)
-                                                                                </span>
-                                                                        </div>
-                                                                </div>
-
+                                                                class="w-full bg-surface-container-high relative flex items-center justify-center min-h-[220px]">
+                                                                <img src="certificate-datacom-forage.jpg"
+                                                                        alt="Datacom Automation AI Accelerator Certificate"
+                                                                        class="w-full h-auto object-contain relative z-10" />
+                                                        </div>
+                                                        <div class="p-6 relative z-10 bg-surface">
+                                                                <h3
+                                                                        class="font-headline font-bold text-lg text-on-surface mb-2">
+                                                                        Automation AI Accelerator: Co-pilot to Autonomous Agent</h3>
+                                                                <p class="font-body text-sm text-on-surface-variant">
+                                                                        Completed practical tasks in AI-powered
+                                                                        debugging &amp; refactoring, process flow
+                                                                        design, and spec-driven development.</p>
+                                                                <span
+                                                                        class="inline-block mt-5 px-5 py-2 bg-surface-container rounded-full font-label text-sm text-primary font-medium">Issued
+                                                                        by Datacom (Forage)</span>
                                                         </div>
                                                 </div>
-                                                <!-- Certificate 2: GenAI Job Simulation (Forage) -->
+                                                <!-- Certificate 3: GenAI Job Simulation (Forage) -->
                                                 <div
                                                         class="cert-card bg-surface border border-outline-variant rounded-3xl overflow-hidden text-center relative">
                                                         <div
@@ -1707,7 +1738,7 @@
                                                                         by BCGX (Forage)</span>
                                                         </div>
                                                 </div>
-                                                <!-- Certificate 3: AI/ML Engineering Internship -->
+                                                <!-- Certificate 4: AI/ML Engineering Internship -->
                                                 <div
                                                         class="cert-card bg-surface border border-outline-variant rounded-3xl overflow-hidden text-center relative">
                                                         <div
@@ -1728,7 +1759,7 @@
                                                                         by DevelopersHub Corporation</span>
                                                         </div>
                                                 </div>
-                                                <!-- Certificate 4: GDG Workshop -->
+                                                <!-- Certificate 5: GDG Workshop -->
                                                 <div
                                                         class="cert-card bg-surface border border-outline-variant rounded-3xl overflow-hidden text-center relative">
                                                         <div
@@ -1941,77 +1972,15 @@
                 </div>
         </footer>
 
+        <!-- Easter egg toast -->
+        <div id="easter-egg-toast" class="easter-egg-toast">
+                <span class="material-symbols-outlined">celebration</span>
+                <span>Vibe certified. You found the secret combo! 🎉</span>
+        </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
         <script src="script.js"></script>
-        <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                        // Target only the project and certificate cards + section headings
-                        const elementsToAnimate = document.querySelectorAll(
-                                "#projects .grid > div, #certificates .grid > div, section h2"
-                        );
-
-                        // Apply initial reveal state and staggered transition delays
-                        elementsToAnimate.forEach((el, index) => {
-                                el.classList.add("reveal");
-
-                                // Add a slight delay for even-indexed cards in 2-column grids
-                                if (el.tagName !== "H2") {
-                                        const columnIndex = index % 2;
-                                        el.style.animationDelay = `${columnIndex * 0.15}s`;
-                                }
-                        });
-
-                        const observerOptions = {
-                                root: null,
-                                rootMargin: "0px 0px -30px 0px", // Trigger when 30px inside viewport
-                                threshold: 0.05
-                        };
-
-                        const observer = new IntersectionObserver((entries, observer) => {
-                                entries.forEach(entry => {
-                                        if (entry.isIntersecting) {
-                                                entry.target.classList.add("active");
-                                                observer.unobserve(entry.target);
-                                        }
-                                });
-                        }, observerOptions);
-
-                        // Give browser 50ms to apply initial hidden state before observing
-                        setTimeout(() => {
-                                document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-                        }, 50);
-                });
-        </script>
-
-        <style>
-                /* Bulletproof Smooth Scroll Reveal */
-                .reveal {
-                        opacity: 0;
-                        visibility: hidden;
-                }
-
-                .reveal.active {
-                        animation: smoothSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-                }
-
-                @keyframes smoothSlideUp {
-                        0% {
-                                opacity: 0;
-                                visibility: hidden;
-                                transform: translateY(35px);
-                        }
-
-                        1% {
-                                visibility: visible;
-                        }
-
-                        100% {
-                                opacity: 1;
-                                visibility: visible;
-                                transform: translateY(0);
-                        }
-                }
-        </style>
+        <script src="enhancements.js"></script>
 </body>
 
 </html>
